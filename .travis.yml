@@ -1,0 +1,15 @@
+language: python
+python:
+    - 3.6
+env:
+- PACKAGE=dicts
+- PACKAGE=logger
+before_install:
+  - cd $PACKAGE
+matrix:
+  include:
+    - python: 3.6
+      env: PACKAGE=dicts
+    - python: 3.6
+      env: PACKAGE=logger
+script: pytest .
