@@ -5,8 +5,8 @@ before_install:
   - cd $PACKAGE
 matrix:
   include:
-    - name: "dicts"
+    - name: "Testing 'dicts' package"
       env: PACKAGE=dicts
-    - name: "logger"
+    - name: "Testing 'logger' package"
       env: PACKAGE=logger
 script: pytest .
